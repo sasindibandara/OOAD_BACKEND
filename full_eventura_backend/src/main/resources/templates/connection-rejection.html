@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; }
+        h1 { color: #1a73e8; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .logo { max-width: 150px; height: auto; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img th:src="'cid:logo2'" class="logo" alt="Eventura Logo" />
+    <h1>Connection Request Rejected</h1>
+    <p>Dear <span th:text="${clientFirstName} + ' ' + ${clientLastName}"></span>,</p>
+    <p>Your connection request for <strong th:text="${eventDetails}"></strong> has been rejected by <span th:text="${providerFirstName} + ' ' + ${providerLastName}"></span>.</p>
+    <p>We encourage you to explore other providers on Eventura to find the perfect match for your event.</p>
+    <p><a th:href="${appUrl}" class="button">Browse Providers</a></p>
+    <p>Need assistance? Contact us at <a th:href="'mailto:' + ${supportEmail}"><span th:text="${supportEmail}"></span></a>.</p>
+    <p>Best regards,<br>The Eventura Team</p>
+</div>
+</body>
+</html>
