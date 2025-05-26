@@ -11,8 +11,7 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**") // Apply to all API endpoints
                 .allowedOrigins(
-                        "http://localhost:8081",
-                        "http://127.0.0.1:8081"
+                        "https://eventura-beige.vercel.app/"
                 ) // Allow your frontend origins
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
                 .allowedHeaders("*")
