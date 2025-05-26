@@ -47,15 +47,6 @@ public class EmailService {
         helper.setText(body, true); // true for HTML content
 
         // Attach images as inline resources
-        try {
-            ClassPathResource logoImage = new ClassPathResource("static/images/logo2.png");
-            helper.addInline("logo2", logoImage);
-            logger.debug("Attached inline image: logo2.png");
-        } catch (Exception e) {
-            logger.error("Failed to attach images: {}", e.getMessage());
-            throw new MessagingException("Failed to attach images", e);
-        }
-
         mailSender.send(message);
         logger.debug("Sent email to {} with subject: {}", to, subject);
     }
