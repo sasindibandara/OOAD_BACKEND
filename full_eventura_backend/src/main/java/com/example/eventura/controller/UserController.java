@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "https://eventura-d9v8s75mu-sasindibandaras-projects.vercel.app")
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
